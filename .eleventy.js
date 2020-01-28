@@ -10,7 +10,8 @@ module.exports = function(eleventyConfig) {
       'png',
       'ico',
       'xml',
-      'webmanifest'
+      'webmanifest',
+      '_redirects'
     ],
     dir: {
       input: '.',

@@ -280,7 +280,9 @@ textarea {
 }
 
 body {
+  background-color: white;
   font-family: 'Open Sans', sans-serif;
+  margin-bottom: 4rem;
 }
 
 h1, h2, h3, h4 {
@@ -310,6 +312,16 @@ li {
 
 em {
   font-size: 85%;
+}
+
+a {
+  color: #c79797;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #c79797;
+  text-decoration: underline;
 }
 
 .pink {
