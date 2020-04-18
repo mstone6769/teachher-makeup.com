@@ -7,22 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
-  {% set css %}
-    {% include "main.css" %}
-  {% endset %}
-  <style type="text/css">
-    {{ css | cssmin | safe }}
-  </style>
+  <link href="/main.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=News+Cycle|Open+Sans&display=swap" rel="stylesheet">
   <meta name="theme-color" content="#fafafa">
 </head>
-<body>
-  <div class="center">
-    <div class="logo-container">
-      <img src="img/teach-her-logo.svg" class="logo" alt="Teach Her Makeup">
-    </div>
-  </div>
-    {{ content | safe }}
+<body>  
+  {{ content | safe }}
   {% set gaJS %}
     {% include "ga.js" %}
   {% endset %}

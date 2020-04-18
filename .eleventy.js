@@ -1,9 +1,12 @@
 const htmlmin = require('html-minifier');
-const CleanCSS = require('clean-css');
 const Terser = require('terser');
+const pluginSass = require("eleventy-plugin-sass");
 
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addFilter('cssmin', (code) => new CleanCSS({}).minify(code).styles);
+  eleventyConfig.addPlugin(pluginSass, {
+    watch: ['src/styles/*.{scss,sass}', '!node_modules/**'],
+    sourcemaps: true
+  });
   eleventyConfig.addFilter('nowhitespace', (code) => code.replace(/\s+/g, ''));
   eleventyConfig.addFilter('jsmin', (code) => {
     const minified = Terser.minify(code);

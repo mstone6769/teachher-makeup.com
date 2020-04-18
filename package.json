@@ -11,10 +11,15 @@
   },
   "author": "Morgan Stone <mstone@designbymorgan.com> (https://morganstone.me/)",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
-    "clean-css": "^4.2.3",
+    "eleventy-plugin-sass": "^1.0.0",
+    "fs-extra": "^9.0.0",
     "html-minifier": "^4.0.0",
+    "node-sass-promise": "^1.0.0",
     "terser": "^4.6.3"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1"
   }
 }

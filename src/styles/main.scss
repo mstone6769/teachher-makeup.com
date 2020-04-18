@@ -1,0 +1,33 @@
+$light-pink: #F7F0F0;
+$pink: #c79797;
+$green: #95a88f;
+
+$font-family-base:  'Open Sans', sans-serif;
+$heading-font-family: 'News Cycle', sans-serif;
+
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/mixins";
+
+@import "./node_modules/bootstrap/scss/reboot";
+@import "./node_modules/bootstrap/scss/type";
+@import "./node_modules/bootstrap/scss/images";
+
+.bg-light-pink {
+  background-color: $light-pink;
+}
+
+body {
+  margin: 1rem;
+}
+
+h1, h2, h3, h4 {
+  font-family:$heading-font-family; 
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+.logo-container {
+  max-width: 200px;
+}
