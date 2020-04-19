@@ -1,9 +1,26 @@
 $light-pink: #F7F0F0;
 $pink: #c79797;
+$dark-pink: darken($pink, 10%);
 $green: #95a88f;
 
 $font-family-base:  'Open Sans', sans-serif;
 $heading-font-family: 'News Cycle', sans-serif;
+
+$light: $light-pink;
+$primary: $pink;
+
+$theme-colors: (
+  "primary": $pink,
+  "light": $light-pink,
+  "white": white
+);
+
+$navbar-light-color: $pink;
+$navbar-light-hover-color: $dark-pink;
+$navbar-light-active-color: $pink;
+$navbar-light-disabled-color: $pink;
+
+$body-color: #666;
 
 @import "./node_modules/bootstrap/scss/functions";
 @import "./node_modules/bootstrap/scss/variables";
@@ -12,14 +29,9 @@ $heading-font-family: 'News Cycle', sans-serif;
 @import "./node_modules/bootstrap/scss/reboot";
 @import "./node_modules/bootstrap/scss/type";
 @import "./node_modules/bootstrap/scss/images";
-
-.bg-light-pink {
-  background-color: $light-pink;
-}
-
-body {
-  margin: 1rem;
-}
+@import "./node_modules/bootstrap/scss/nav";
+@import "./node_modules/bootstrap/scss/navbar";
+@import "./node_modules/bootstrap/scss/utilities";
 
 h1, h2, h3, h4 {
   font-family:$heading-font-family; 
@@ -28,6 +40,69 @@ h1, h2, h3, h4 {
   letter-spacing: 0.1em;
 }
 
+.heading-family {
+  font-family:$heading-font-family;
+  font-weight: 400;
+}
+
 .logo-container {
   max-width: 200px;
+}
+
+// Navigation
+
+.navbar-nav .nav-link {
+  font-family: $heading-font-family;
+}
+
+.font-stretch {
+  letter-spacing: 0.15em;
+}
+
+.line-height-1,
+.line-height-100 {
+  line-height: 1 !important;
+}
+
+.line-height-125 {
+  line-height: 1.25 !important;
+}
+
+
+.line-height-150 {
+  line-height: 1.5 !important;
+}
+
+.line-height-200 {
+  line-height: 2 !important;
+}
+
+.max-width-1 {
+  max-width: 24rem;
+}
+
+.max-width-2 {
+  max-width: 32rem;
+}
+
+.max-width-3 {
+  max-width: 48rem;
+}
+
+.max-width-4 {
+  max-width: 64rem;
+}
+
+.max-width-5 {
+  max-width: 84rem;
+}
+
+.divider:after {
+  display: block;
+  content: "";
+  width: 24rem;
+  height: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: gainsboro;
 }
